@@ -1,0 +1,88 @@
+.onOffButton {
+    position: relative;
+    width: 110px;
+    height: 36px;
+    background-color: #ccc;
+    // margin: -20px auto 0 auto;
+    overflow: hidden;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+
+}
+.checkbox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+.knobs
+{
+    z-index: 2;
+}
+.layer {
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+.onOffButton .knobs:before {
+    content: 'TEXT';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 38px;
+    height: 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #03A9F4;
+    border-radius: 2px;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+}
+
+
+
+.onOffButton .checkbox:active + .knobs:before {
+    width: 46px;
+}
+
+.onOffButton .checkbox:checked:active + .knobs:before {
+    margin-left: -26px;
+}
+
+.onOffButton .checkbox:checked + .knobs:before {
+    content: 'CODE';
+    font-size: 15px;
+    left: 60px;
+    background-color: purple;
+}
+
+.onOffButton .checkbox:checked ~ .layer
+{
+    background-color: #fcebeb;
+}
+
+.onOffButton .darkModeBtn:before {
+    content: 'LIGHT';
+    font-size: 13px;
+    color: rgba(105, 105, 105, 1.0);
+    background-color: #f4f4f4;
+
+
+}
+
+.onOffButton .checkbox:checked + .darkModeBtn:before {
+    content: 'DARK';
+    font-size: 13px;
+    left: 60px;
+    color: #f4f4f4;
+    background-color: rgba(105, 105, 105, 1.0);
+}

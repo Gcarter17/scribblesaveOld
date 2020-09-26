@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+/* Global Styles */
+:root {
+  --primary-color: #003699;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: var(--light-color);
+  color: #333;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #666;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+.container {
+  // max-width: 1264px;
+  max-width: 1500px;
+  margin: auto;
+  margin-bottom: 300px;
+  overflow: hidden;
+  padding: 2rem 2rem 4rem 2rem;
+}
+
+// when screen is 700px wide or less
+@media only screen and (max-width: 700px) {
+  .container {
+    padding: 0.5rem 0.5rem 3rem 0.5rem;
+  }
+}
+
+.flexTop {
+  display: flex;
+  height: auto;
+  width: 100%;
+  z-index: 1;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+    
+  ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    li {
+      display: flex;
+      padding:.5rem;
+
+      &:first-child {
+        flex-grow: 1;
+        min-width: 300px;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.searchbar {
+  display: block;
+  height: 36px;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Grid */
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+.grid-2 {
+  width: 100%;
+  display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 50% 50%;
+  grid-gap: 1rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  // grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.grid-2-3 {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-gap: 2rem;
+}

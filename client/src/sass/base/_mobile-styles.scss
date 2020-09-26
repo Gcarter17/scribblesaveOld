@@ -1,0 +1,45 @@
+/* Mobile Styles */
+@media only screen and (max-width: 700px) {
+    .hide-sm {
+      display: none;
+    }
+  
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Text Styles */
+    .x-large {
+      font-size: 3rem;
+    }
+  
+    .large {
+      font-size: 2rem;
+    }
+  
+    .lead {
+      font-size: 1rem;
+    }
+  
+    /* Navbar */
+    .navbar {
+      display: block;
+      text-align: center;
+    }
+  
+    .navbar h1 {
+      margin-bottom: 0.6rem;
+    }
+  
+    .navbar ul {
+      text-align: center;
+      justify-content: center;
+    }
+    .form-container {
+      // margin: 2rem auto; original value
+      margin: .5rem auto !important;
+      padding: 0 !important;
+    }
+  }

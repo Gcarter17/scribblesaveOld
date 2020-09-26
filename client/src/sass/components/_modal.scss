@@ -1,0 +1,52 @@
+.ReactModalPortal {
+  position: absolute;
+  z-index: 10;
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    margin: 1rem 0;
+  }
+}
+  .btn-modal {
+    display: block;
+    margin: 0 auto;
+    width: 12rem;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .fixed-activate {
+    position: fixed;
+    z-index: 1000;
+    right: 5vw;
+    top: 90vh;
+  }
+
+@media only screen and (max-width: 700px) {
+    .fixed-activate {
+      right: 10vw;
+    }
+  }
+  
+  .plus-red,
+  .times-red {
+    color: rgb(250, 23, 98);
+    transform: scale(1.6);
+  }
+  
+  .times-red:hover {
+    color: rgb(209, 20, 83);
+    transform: scale(1.8);
+    transition: all 0.2s;
+  }
+  
+  .plus-med {
+    font-size: 2rem !important;
+  }
+  .close-btn {
+    float: right;
+    width: auto;
+  }

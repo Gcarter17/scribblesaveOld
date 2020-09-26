@@ -1,0 +1,49 @@
+.left,
+.right{
+  width: 12px;
+  height: 7px;
+  background-color: black;
+  transition: .25s ease all;
+}
+
+.left{
+  transform: skew(0,-45deg);
+}
+
+.right{
+  transform: skew(0,45deg);
+  
+}
+
+.toggle{
+    cursor:pointer;
+    // align-self: flex-end;
+    align-self: center;
+    position: absolute;
+    bottom: -20px;
+    background-color: grey;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    * {
+    margin-top: 15px;
+    }
+}
+.active{
+    * {
+        margin-top: 17px;
+
+    }
+      
+    
+    .left{
+      transform: skew(0,45deg);
+    }
+
+    .right{
+      transform: skew(0,-45deg); 
+    }
+}
